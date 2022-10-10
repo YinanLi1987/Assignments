@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const mysql = require("mysql2/promise");
+
 const connection = require("./database");
 
 const app = express();
@@ -10,7 +10,7 @@ app.use(express.json());
 // read data from url
 app.use(express.urlencoded({ extended: false }));
 
-const port = 3011;
+const port = 3012;
 
 /*app.get("/", async function (req, res) {
   config.connect(function (err) {
