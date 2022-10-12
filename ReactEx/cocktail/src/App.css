@@ -1,0 +1,50 @@
+header{
+  padding: 20px;
+  text-align:center;
+  background:#FADF84;
+  color:black;
+  font-size: 20px;
+  font-family:fantasy;
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+.container{
+  padding:60px;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  font-family:fantasy;
+  font-weight: bold;
+
+}
+
+.cocktail-of-the-day{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30px;
+  justify-content:space-around;
+}
+.cocktail-of-the-day .left-part, .search-result .result-left{
+  padding:30px;
+  height:400px;
+  width:400px;
+  text-align: center;
+  font-family:fantasy;
+  font-weight: bold;
+}
+.cocktail-of-the-day .right-part, .search-result .result-right{
+  margin-top: 250px;
+  padding: 30px;
+  height: 400px;
+  width: 400px;
+  background:#F9F5E9
+  
+}
+.cocktail-of-the-day img,.result-left img{
+
+  height: 400px;
+  width: 400px;
+}
+
+
