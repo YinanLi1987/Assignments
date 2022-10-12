@@ -11,8 +11,7 @@ function SearchByName() {
   const [ingredient1, setIngredient1] = useState("");
   const [ingredient2, setIngredient2] = useState("");
   const [ingredient3, setIngredient3] = useState("");
-  const [show, setShow] = useState(false);
-  const handleShow = () => setShow(true);
+  const [toggle, setToggle] = useState(false);
 
   async function DisplaySearch(e) {
     e.preventDefault();
@@ -48,25 +47,27 @@ function SearchByName() {
               value={cocktailNameInput}
               onChange={(e) => setCocktail(e.target.value)}
             />
-            <button>Search</button>
+            <button onClick={() => setToggle(!toggle)}>Search</button>
+            {toggle && (
+              <div className="search-result">
+                <div className="result-left">
+                  <h1>{cocktailName}</h1>
+                  <img src={cocktailImg} />
+                </div>
+
+                <div className="result-right">
+                  <h4>Instruction and ingredients:</h4>
+                  <p>{cocktailInstruction}</p>
+                  <ul>
+                    <li>{ingredient1}</li>
+                    <li>{ingredient2}</li>
+                    <li>{ingredient3}</li>
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </form>
-      </div>
-      <div className="search-result">
-        <div className="result-left">
-          <h1>{cocktailName}</h1>
-          <img src={cocktailImg} />
-        </div>
-
-        <div className="result-right">
-          <h4>Instruction and ingredients:</h4>
-          <p>{cocktailInstruction}</p>
-          <ul>
-            <li>{ingredient1}</li>
-            <li>{ingredient2}</li>
-            <li>{ingredient3}</li>
-          </ul>
-        </div>
       </div>
     </div>
   );

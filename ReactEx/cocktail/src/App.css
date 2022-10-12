@@ -18,7 +18,7 @@ header{
 
 }
 
-.cocktail-of-the-day{
+.cocktail-of-the-day,.search-result{
   display: flex;
   flex-direction: row;
   align-items: center;
