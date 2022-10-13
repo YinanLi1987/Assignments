@@ -39,16 +39,18 @@ function SearchByLetter() {
             />
             <button onClick={() => setToggle(!toggle)}>Search</button>
             {toggle && (
-              <div search-results-by-letter>
+              <div>
                 <h3>Cocktail name starts with {letterInput}</h3>
-                <ol>
-                  {cocktails.map((cocktail) => (
-                    <li key={cocktail.idDrink}>
-                      {cocktail.strDrink}
-                      <img src={cocktail.strDrinkThumb} alt="" />
-                    </li>
-                  ))}
-                </ol>
+                <div className="search-results-by-letter">
+                  <ol>
+                    {cocktails.map((cocktail) => (
+                      <li key={cocktail.idDrink}>
+                        {cocktail.strDrink}
+                        <img src={cocktail.strDrinkThumb} alt="" />
+                      </li>
+                    ))}
+                  </ol>
+                </div>
               </div>
             )}
           </div>
