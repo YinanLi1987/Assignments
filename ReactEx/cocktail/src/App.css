@@ -1,14 +1,14 @@
-header{
+.navbar {
   padding: 20px;
-  text-align:center;
+  
   background:#FADF84;
   color:black;
   font-size: 20px;
   font-family:fantasy;
   font-weight: bold;
-  letter-spacing: 10px;
+
 }
-.container{
+.containe, .search-by-letter{
   padding:60px;
   display: flex;
   flex-direction:column;
@@ -47,4 +47,7 @@ header{
   width: 400px;
 }
 
-
+.search-results-by-letter img{
+  height: 40px;
+  width: 40px;
+}

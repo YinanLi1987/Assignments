@@ -42,7 +42,7 @@ function SearchByName() {
       <div className="search-bar">
         <form onSubmit={DisplaySearch}>
           <div>
-            <lable>Search cocktail by name</lable>&nbsp;
+            <lable>Search cocktail by name</lable>
             <input
               value={cocktailNameInput}
               onChange={(e) => setCocktail(e.target.value)}
