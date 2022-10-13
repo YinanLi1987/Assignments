@@ -31,22 +31,22 @@ function SearchByLetter() {
     <div className="search-by-letter">
       <div className="search-bar">
         <form onSubmit={DisplaySearch}>
-          <div>
-            <lable>Search cocktail by first letter</lable>
+          <div className="search-input">
+            <lable>Recommend cocktail by letter</lable>
             <input
               value={letterInput}
               onChange={(e) => setLetterInput(e.target.value)}
             />
             <button onClick={() => setToggle(!toggle)}>Search</button>
+            <p>For example: a, b, c ......</p>
             {toggle && (
-              <div>
-                <h3>Cocktail name starts with {letterInput}</h3>
+              <div className="search-text">
                 <div className="search-results-by-letter">
                   <ol>
                     {cocktails.map((cocktail) => (
                       <li key={cocktail.idDrink}>
-                        {cocktail.strDrink}
                         <img src={cocktail.strDrinkThumb} alt="" />
+                        {cocktail.strDrink}
                       </li>
                     ))}
                   </ol>

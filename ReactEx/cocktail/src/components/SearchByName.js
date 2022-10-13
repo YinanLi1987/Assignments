@@ -48,9 +48,11 @@ function SearchByName() {
               onChange={(e) => setCocktail(e.target.value)}
             />
             <button onClick={() => setToggle(!toggle)}>Search</button>
+            <p>For example: Alexander, Buccaneer, Casino ...... </p>
             {toggle && (
               <div className="search-result">
                 <div className="result-left">
+                  <h2>Enjoy Your Cocktail</h2>
                   <h1>{cocktailName}</h1>
                   <img src={cocktailImg} />
                 </div>
